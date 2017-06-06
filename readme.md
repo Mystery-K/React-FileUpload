@@ -266,6 +266,13 @@ Abort a xhr. Temporarily only works in modern browsers.
 
 @param xhrID {int} If not passing an ID, will abort the newest one. You can get the ID of a xhr in `doUpload()`. 
 
+#### forwardClearFiles ####
+Clear current files.
+
+@param null
+
+@return null
+
 ## examples ##
 
 If you have better and clearer demos, plz tell me! Online or offline.
@@ -717,6 +724,13 @@ render(){
 
 @param xhrID {int} 这里如果不传入id，就会取消最新的一个xhr。 在  `doUpload()` 函数的参数中可以得到xhrID。
 
+#### forwardClearFiles ####
+主动清除当前已选择文件
+
+@param null
+
+@return null
+
 ## 例子 ##
 
 简单使用方式：
@@ -934,60 +948,6 @@ render() {
 - [@David Stevens](https://github.com/davidstevens37)
 
 ## Change-log ##
-
-### 2.4.0 ###
-- Add property `userAgent`, thanks [@David Stevens](https://github.com/davidstevens37).
-- Add Webpack build scripts, thanks [@David Stevens](https://github.com/davidstevens37).
-
-### 2.3.0 ###
-- Add special property `textBeforeFiles`, thanks [@Pritoj](https://github.com/Pritoj).
-- Add component function `abort`
-- Update function `doUpload(files, mill, xhrID)`
-- Add life circle function `onabort`
-
-### 2.2.0 ###
-- Add property `withCredentials`.
-- Add property `requestHeaders`.
-- Add `main.min.js`, and `main` in `package.json` points at that file now.
-
-### 2.1.2 ###
-- Fix #7, unexpected error on `fileFIeldName`.
-
-### 2.1.1 ###
-- Fix #6, when passing undefined and null as child, a TypeError is raised.
-
-### 2.1.0 ###
-- Update property `fileFieldName`, can be string or func.
-
-### 2.0.2 ###
-- Fix bug in main.js
-- Update dependency `react` to `^15.0.2` 
-
-### 2.0.0 ###
-- Update lib (babel6+), *not supporting IE8 by default, you can use es5-shim or so to rebuild.*
-- *DELETE* property `paramsAddToFile` in options. Just add your params to formData.
-- Now supporting multiple upload, add property `multiple`
-- Add property `numberLimit`
-- Add property `accept`
-- Add property `fileFieldName`
-- Add special property `disabledIEChoose`
-- Add component function `forwardChoose`
-- `Uploading` is now supporting IE9-, but just using inteval to create percentage.
-
-
-### 1.1.3 ###
-- Add `PropTypes`
-
-### 1.1.2 ###
-- Fix a bug in 1.1.1, which will throw an error in IE
-
-### 1.1.1 ###
-- Add property `timeout`
-- Optimize logic of `IE form group`
-
-### 1.1.0 ###
-- Add component function `filesToUpload`
-- Add special property `tag`
 
 ### 1.0.1 ###
 - init
